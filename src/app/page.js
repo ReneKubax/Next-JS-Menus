@@ -1,23 +1,23 @@
 "use client";
 
-import { useTasks } from "../app/context/TasksContext";
+import { useRecipes } from "../context/RecipeContext";
 import { VscTasklist } from "react-icons/vsc";
-import { TaskCard } from "../components/TaskCard";
+import { RecipeCard } from "../components/RecipeCard";
 
 function Home() {
-  const { tasks } = useTasks();
+  const { recipes } = useRecipes();
 
   return (
     <div className="flex justify-center">
-      {tasks.length === 0 ? (
+      {recipes.length === 0 ? (
         <div className="block">
-          <h2 className="text-2xl">There are no tasks</h2>
+          <h2 className="text-2xl">There are no recipes</h2>
           <VscTasklist size="8rem" />
         </div>
       ) : (
         <div className="w-7/10">
-          {tasks.map((task, i) => (
-            <TaskCard task={task} key={i} />
+          {recipes.map((recipe, i) => (
+            <RecipeCard recipe={recipe} key={i} />
           ))}
         </div>
       )}
