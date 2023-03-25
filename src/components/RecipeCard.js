@@ -38,7 +38,7 @@ export const RecipeCard = ({ recipe }) => {
   <div className="flex items-center justify-between w-full">
     <img
       className="w-20 h-20 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500 mr-5"
-      src={imageUrl || "/default-image.png"}
+      src={imageUrl || "https://64.media.tumblr.com/90c63cd67d87fd14678757e42b17db9f/tumblr_mstpufdc9w1sqfhloo1_500.jpg"}
       alt="Bordered avatar"
     />
     <div className="flex-grow mr-5">

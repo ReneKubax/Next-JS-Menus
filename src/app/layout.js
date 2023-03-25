@@ -7,7 +7,8 @@ import { Footer } from "@/components/Footer";
 import { Banner } from "@/components/Banner";
 
 export const metadata = {
-  title: "Food recipes",
+  title: "YummyHub 😸",
+  description: 'Free App to share Recipes',
 };
 
 export default function RootLayout({ children }) {

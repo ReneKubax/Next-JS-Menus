@@ -12,8 +12,11 @@ export function Navbar() {
   return (
     <header className="flex items-center bg-gray-800 px-28 py-3">
       <Link href="/">
-        <h1 className="font-black text-3xl text-white">Recipes App 🍴</h1>
-      </Link>
+  <div className="flex items-center">
+    <img src="https://png.pngtree.com/png-clipart/20221022/original/pngtree-chef-cat-vector-logo-mascot-png-image_8712395.png"  alt="Logo" className="w-10 h-10 mr-2"/>
+    <h1 className="font-black text-3xl text-white">YummyHub🍴</h1>
+  </div>
+</Link>
 
       <span className="ml-2 text-gray-400 font-bold">{recipes.length} Recipes</span>
 
