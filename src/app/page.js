@@ -1,5 +1,5 @@
 "use client";
-
+import "./globals.css";
 import { useRecipes } from "../context/RecipeContext";
 import { VscTasklist } from "react-icons/vsc";
 import { RecipeCard } from "../components/RecipeCard";

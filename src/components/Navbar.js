@@ -14,7 +14,7 @@ export function Navbar() {
       <Link href="/">
   <div className="flex items-center">
     <img src="https://png.pngtree.com/png-clipart/20221022/original/pngtree-chef-cat-vector-logo-mascot-png-image_8712395.png"  alt="Logo" className="w-10 h-10 mr-2"/>
-    <h1 className="font-black text-3xl text-white">YummyHub🍴</h1>
+    <h1 className="font-black text-3xl text-white">YummyHub</h1>
   </div>
 </Link>
 

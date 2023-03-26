@@ -33,13 +33,16 @@ export const RecipeCard = ({ recipe }) => {
   }, [recipe]);
 
   return (
-    <div className="bg-gray-700 hover:bg-gray-600 cursor-pointer p-5 m-2 flex items-center"
+    <div className="bg-gray-700 hover:bg-gray-600 cursor-pointer p-5 flex items-center"
+    style={{ marginBottom: '20px' }}
     onClick={() => router.push(`/edit/${recipe.id}`)}>
   <div className="flex items-center justify-between w-full">
     <img
       className="w-20 h-20 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500 mr-5"
       src={imageUrl || "https://64.media.tumblr.com/90c63cd67d87fd14678757e42b17db9f/tumblr_mstpufdc9w1sqfhloo1_500.jpg"}
       alt="Bordered avatar"
+      width="20"
+      height="20"
     />
     <div className="flex-grow mr-5">
       <h1 className="font-bold">{recipe.title}</h1>
@@ -62,5 +65,6 @@ export const RecipeCard = ({ recipe }) => {
     </button>
   </div>
 </div>
+
   );
 };

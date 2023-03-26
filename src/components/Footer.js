@@ -5,11 +5,11 @@ export const Footer = () => {
   return (
     
 <footer className="bg-gray-700 dark:bg-gray-900 m-6 mr-0 ml-0 mb-0  mt-auto pb-0 bottom-0 left-0 right-0">
-    <div className="w-full container mx-auto p-4 md:px-6 md:py-8">
+    <div className="w-full container mx-auto p-4 md:px-230 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
-            <a href="https://flowbite.com/" className="flex items-center mb-4 sm:mb-0">
-                <img src="https://flowbite.com/docs/images/logo.svg" className="h-8 mr-3" alt="Flowbite Logo" />
-                <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+            <a href="#" className="flex items-center mb-4 sm:mb-0">
+            <img src="https://png.pngtree.com/png-clipart/20221022/original/pngtree-chef-cat-vector-logo-mascot-png-image_8712395.png"  alt="Logo" className="w-10 h-10 mr-2"/>
+                <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">YummyHub</span>
             </a>
             <ul className="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400">
                 <li>
