@@ -26,45 +26,40 @@ export const RecipeCard = ({ recipe }) => {
           setImageUrl(photos[0].src.medium);
         }
       } catch (error) {
-        console.error(error);
+        alert.error(error);
       }
     };
     fetchImage();
   }, [recipe]);
 
   return (
-    <div className="bg-gray-700 hover:bg-gray-600 cursor-pointer p-5 flex items-center"
-    style={{ marginBottom: '20px' }}
-    onClick={() => router.push(`/edit/${recipe.id}`)}>
-  <div className="flex items-center justify-between w-full">
-    <img
-      className="w-20 h-20 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500 mr-5"
-      src={imageUrl || "https://64.media.tumblr.com/90c63cd67d87fd14678757e42b17db9f/tumblr_mstpufdc9w1sqfhloo1_500.jpg"}
-      alt="Bordered avatar"
-      width="20"
-      height="20"
-    />
-    <div className="flex-grow mr-5">
-      <h1 className="font-bold">{recipe.title}</h1>
-      <p className="text-gray-300">Description: {recipe.description}</p>
-      <p className="text-gray-300">Ingredients: {recipe.ingredients}</p>
-      <span className="text-gray-400 text-xs">
-        *Press the recipe to edit it*
-      </span>
-    </div>
-    <button
-      className="bg-red-700 hover:bg-red-600 px-3 py-1 inline-flex items-center"
-      onClick={(e) => {
-        e.stopPropagation();
-        const accept = confirm("Are you sure you want to delete this recipe?");
-        if (accept) deleteRecipe(recipe.id);
-        toast.success("Recipe deleted successfully");
-      }}
+    <div className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 max-w-sm grid-cols-4 mb-4"
+    onClick={() => router.push(`/edit/${recipe.id}`)}
     >
-      <VscTrash className="mr-2" />Delete
-    </button>
+    <a href="#" className="flex flex-col md:flex-row w-full">
+      <img className="object-cover w-full h-64 md:h-auto md:w-48 rounded-t-lg md:rounded-l-lg" src={imageUrl || "https://64.media.tumblr.com/90c63cd67d87fd14678757e42b17db9f/tumblr_mstpufdc9w1sqfhloo1_500.jpg"} alt="Recipe image" />
+      <div className="flex flex-col justify-between p-4 leading-normal w-full">
+        <div>
+          <h1 className="text-gray-700 dark:text-gray-400 mb-2">{recipe.title}</h1>
+          <p className="text-gray-700 dark:text-gray-400 mb-3">Description: {recipe.description}</p>
+          <p className="text-gray-700 dark:text-gray-400 mb-3">Ingredients: {recipe.ingredients}</p>
+        </div>
+        <span className="text-gray-400 text-xs">
+          *Press the recipe to edit it*
+        </span>
+        <button
+          className="bg-red-700 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full inline-flex items-center mt-3 ml-auto"
+          onClick={(e) => {
+            e.stopPropagation();
+            const accept = confirm("Are you sure you want to delete this recipe?");
+            if (accept) deleteRecipe(recipe.id);
+            toast.success("Recipe deleted successfully");
+          }}
+        >
+          <VscTrash className="mr-2" />Delete
+        </button>
+      </div>
+    </a>
   </div>
-</div>
-
   );
 };
